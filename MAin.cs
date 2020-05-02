@@ -33,12 +33,14 @@ namespace DragNDrop
             this.AllowDrop = true;      //Enable drag and drop for this form
             this.DragEnter += new DragEventHandler(frmMain_DragEnter);  //Event handler for drag enter
             this.DragDrop += new DragEventHandler(frmMain_DragDrop);    //Event handler for drag drop
+            //hello world
             
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            this.Close();
         }
 
 
