@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,8 @@ namespace DragNDrop
 {
     public partial class frmMain : Form
     {
+
+        private const string helpfile = "Drag and Drop App.pdf";
         public frmMain()
         {
             InitializeComponent();
@@ -33,14 +36,16 @@ namespace DragNDrop
             this.AllowDrop = true;      //Enable drag and drop for this form
             this.DragEnter += new DragEventHandler(frmMain_DragEnter);  //Event handler for drag enter
             this.DragDrop += new DragEventHandler(frmMain_DragDrop);    //Event handler for drag drop
-            //hello world
+            
+            
+
             
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            this.Close();
+            
         }
 
 
@@ -60,6 +65,21 @@ namespace DragNDrop
                 var fileName = data as string[];
                 if (fileName.Length > 0)
                     picDrop.Image = Image.FromFile(fileName[0]);
+            }
+        }
+
+        private void userMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            string helpFileName = @"c:\help.pdf";
+            string path = Path.Combine(Environment.CurrentDirectory, helpFileName);
+            if (System.IO.File.Exists(helpFileName))
+            {
+                Help.ShowHelp(this, helpFileName);
             }
         }
     }

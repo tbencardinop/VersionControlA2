@@ -30,6 +30,7 @@
         {
             this.picDrop = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picDrop)).BeginInit();
             this.SuspendLayout();
             // 
@@ -37,7 +38,7 @@
             // 
             this.picDrop.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.picDrop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picDrop.Location = new System.Drawing.Point(12, 12);
+            this.picDrop.Location = new System.Drawing.Point(11, 12);
             this.picDrop.Name = "picDrop";
             this.picDrop.Size = new System.Drawing.Size(620, 264);
             this.picDrop.TabIndex = 0;
@@ -46,7 +47,7 @@
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.Location = new System.Drawing.Point(500, 282);
+            this.btnExit.Location = new System.Drawing.Point(499, 282);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(132, 34);
             this.btnExit.TabIndex = 1;
@@ -54,11 +55,23 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHelp.Location = new System.Drawing.Point(12, 282);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(132, 34);
+            this.btnHelp.TabIndex = 2;
+            this.btnHelp.Text = "Show Help";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 328);
+            this.ClientSize = new System.Drawing.Size(643, 378);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.picDrop);
             this.Name = "frmMain";
@@ -76,6 +89,7 @@
 
         private System.Windows.Forms.PictureBox picDrop;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnHelp;
     }
 }
 
