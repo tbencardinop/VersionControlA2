@@ -75,6 +75,7 @@ namespace DragNDrop
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
+            //Create a path to open the helpfile located within the project folder
             string helpFileName = @"c:\help.pdf";
             string path = Path.Combine(Environment.CurrentDirectory, helpFileName);
             if (System.IO.File.Exists(helpFileName))
